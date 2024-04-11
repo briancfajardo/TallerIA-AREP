@@ -1,0 +1,135 @@
+AMD a principios de década
+El lanzamiento de su primera APU (Enero de 2011)
+
+A comienzos de 2011, AMD presentó por primera vez conocido concepto de APU o Accelerated Processing Unit, que viene a ser lo mismo que un procesador con tarjeta gráfica integrada en el mismo chip, de la misma manera que había hecho Intel por primera vez unos meses antes.
+
+Estos procesadores, enfocados inicialmente a ordenadores portátiles, marcaron lo que posteriormente sería una parte muy importante del mercado de AMD, con el lanzamiento primero de los procesadores de Serie A y luego con las actuales APUs Ryzen.
+
+El lanzamiento de los AMD FX
+
+La primera arquitectura de la década creada por AMD fue la FX. Como veréis ahora fue ampliamente controvertida y debido a ello no consiguió ponerse por delante de Intel ni en rendimiento ni en cuota de mercado. El primer lanzamiento de esta familia fue Bulldozer, en octubre de 2011, con el que se presentaron los FX-8XXX de 8 «núcleos» (nótense las comillas) y 4 módulos, los FX-6XXX de 6 «núcleos» y 3 módulos, y los FX-4XXX de 4 «núcleos» y 2 módulos.
+
+Posteriormente, llegó la segunda generación con Piledriver, a la que pertenece el que probablemente sea el procesador más conocido de la gama, el FX-8350. Esta familia recibió mejoras en la arquitectura que permitieron un aumento de las frecuencias de reloj, y mantuvo características fundamentales respecto a su predecesora como el uso de un nodo de fabricación de 32nm.
+
+Estos procesadores estuvieron siempre cuestionados por varias cuestiones, os explicaremos dos de las más fundamentales: los falsos núcleos y el bajo IPC.
+
+AMD y los «núcleos de mentira»
+Se podría llegar a decir que con los AMD FX se consiguió llevar los procesadores de 8 núcleos al segmento doméstico. Sin embargo, en la realidad son una historia algo distinta y complicada de explicar.
+
+Básicamente, los «núcleos» están agrupados en módulos de dos «núcleos» cada uno. Sin entrar en profundidad en el asunto, se puede explicar básicamente de la siguiente manera: dentro de cada módulo, encontramos dos núcleos para operaciones aritméticas con enteros y tan solo una unidad FPU para procesamiento con números de coma flotante. AMD consideró que esto era suficiente para hablar de dos núcleos por módulo, pero tal y como constata el hecho de que hayan perdido una demanda millonaria por este asunto, no se puede decir que sea así.
+
+Si combinamos esto con el hecho de que hay una caché de nivel 2 por módulo y no por núcleo, y que también se comparte la caché L1 I, además de muchas otras partes fundamentales como el predictor de saltos, o las partes dedicadas a las etapas de fetch y decode de las instrucciones, concluimos que los núcleos de procesamiento de enteros no pueden funcionar de manera independiente.
+
+Tenemos más partes no compartidas como las AGU, dedicadas a la generación de direcciones de memoria, ya que encontramos dos por módulo, la caché L1 D, y algunas otras partes. Al fin y al cabo, lo que vemos es cómo efectivamente sí que hay partes dentro de cada módulo que corresponderían a dos núcleos, pero muchas otras ampliamente fundamentales están compartidas, y corresponderían a un único núcleo.
+
+¿Y cómo afectó esto al rendimiento? En la práctica, todo dependía de la tarea concreta, en algunas actuaba mejor y en otras peor, por lo que no se puede decir a la ligera que es un 8 núcleos 8 hilos, y quizás sería erróneo tratarlo directamente como si fuese un 4 núcleos 8 hilos. En resumen, un lío.
+
+El problema añadido del IPC
+Al peculiar e ineficiente diseño de esta familia de procesadores se le suman varios hándicaps más que les impedían estar a la altura de los ofrecimientos de Intel. Y es que el IPC (instrucciones por ciclo) de estas CPUs era considerablemente inferior al de la competencia, y por lo tanto los procesadores AMD FX necesitaban una frecuencia de reloj superior para acercarse en rendimiento mono-núcleo.
+
+De hecho, tal y como os mostramos en la imagen de arriba, un AMD FX-8350 con 4.0GHz de frecuencia base no conseguía alcanzar a un i3 3220 de 3.3GHz en su rendimiento de Cinebench. El enfoque que AMD tuvo que tener en subir las frecuencias a toda costa influyó negativamente en el diseño y en el rendimiento energético de estas CPUs, y a pesar de ello apenas tuvieron éxito.
+
+Prueba de este empeño fue el lanzamiento en 2014 del AMD FX-9590, en un intento desesperado por competir con Intel. Este procesador alcanzaba los 5.0GHz de frecuencia (turbo) con un absurdo TDP de 220W, y apenas era capaz de superar a un mucho más eficiente Intel Core i5-4690K que además tenía un buen margen de overclock.
+
+Evolución más allá de Piledriver en los procesadores de serie A
+Las evoluciones de Piledriver se trasladaron únicamente a APUs de la serie A (A4, A6, A8, A10), pues AMD decidió no ir más allá en las series FX. Estas fueron Steamroller en 2014, basado en un nodo de 28nm y que mejoró el IPC, y Excavator en 2015, también basada en 15nm y que nuevamente supuso otra mejora más de IPC, aunque siguieron detrás de Intel.
+
+Problemas financieros y la salvación de Lisa Su y Ryzen
+
+Ya entrados en 2014, la situación financiera de la compañía era cada vez peor. Los medios especulaban continuamente con la posibilidad de que AMD entrase en bancarrota o fuese comprada por compañías como Samsung o NVIDIA. La compañía no dejaba de caer en la irrelevancia y hacía falta un cambio importante.
+
+A partir de ocubre de 2014, la doctora Lisa Su asumió el cargo de CEO de AMD. Solo unos pocos años después, la compañía entró en un muy buen rumbo económico y tecnológico, y resulta evidente que su liderazgo ha tenido mucho que ver. No en vano el año pasado fue nombrada una de las mejores CEOs del mundo por el periódico Barron’s, una de las mujeres más poderosas en los negocios según Fortune, y formó parte de la lista Bloomberg 50 de «los 50 personajes que definieron 2019».
+
+Una de las tareas más importantes que asumió Su sería llevar a buen puerto el desarrollo de la microarquitectura Zen, y cuyo éxito está marcando la buena salud actual de la empresa.
+
+El anuncio de la gestación de AMD Zen
+Como os indicamos antes, los procesadores FX no consiguieron tener éxito debido a su extraña arquitectura, que apenas era capaz de competir con lo que ofrecía Intel. Por lo tanto, era urgente presentar una alternativa competente. Resulta evidente que desarrollar una CPU totalmente nueva de cero no es un proceso fácil, y suele llevar al menos 5 años.
+
+Pues bien, con este objetivo se comenzó a desarrollar la microarquitectura AMD Zen en 2012, siendo anunciada su existencia al público en 2015.
+
+Una de las grandes bazas prometidas por la compañía en su día fue un incremento del 40% del IPC frente a la última iteración de la arquitectura heredada de los procesadores FX, Excavator. Estas nuevas CPUs llegarían bajo una plataforma que haría uso del socket AM4 que conocemos hoy en día y como es de esperar usarían memorias DDR4.
+
+Durante este período, lo que estuvo haciendo AMD fue básicamente ir goteando información sobre Zen en forma de diapositivas, de hecho se bromeó mucho acerca de las dotes en PowerPoint que había en la compañía ante la falta de resultados tangibles, y se fabuló sobre si todo sería «humo» o se acercaría a lo bien que lo estaban pintando. El momento de la verdad llegaría en 2017.
+
+AMD New Horizon y la llegada de Ryzen 1000
+
+El 13 de diciembre de 2016 tuvo lugar un importante evento: AMD New Horizon, en el cual se revelaron las primeras pruebas de rendimiento de un procesador basado en Zen, y no solo eso, el nombre de la familia de procesadores basada en la arquitectura: RYZEN.
+
+Lo cierto es que la elección de nombre no pudo ser mejor gracias al juego de palabras que hace con la palabra del inglés «risen», es decir, resucitado. Y es que este lanzamiento fue la resurrección de AMD y de un mercado de los procesadores que se encontraba estancado. La llegada de un procesador de 8 núcleos y 16 hilos (de verdad, no al estilo FX) al segmento doméstico por un precio asequible fue algo revolucionario, tengamos en cuenta que hasta el momento solo se podían conseguir procesadores así en la gama extrema. Pensad, por ejemplo, que cuando se lanzó Ryzen un Intel Core i7 6900K de 8 núcleos y 16 hilos valía alrededor de 1200 euros.
+
+Estas son algunas de las grandes ventajas y novedades que agitaron el mercado, y de hecho muchas de ellas serían adoptadas por Intel posteriormente:
+
+Uso de un proceso de fabricación eficiente que implicaba que en muchos casos el disipador stock fuese más que suficiente.
+Uso de soldadura de alta calidad entre el «die» y el IHS (la pieza metálica serigrafiada que vemos nosotros) en vez de pasta térmica como la de Intel.
+Todos los procesadores están desbloqueados para overclocking, con algunas excepciones como el básico Athlon 200GE que se lanzó más tarde.
+Como ya decimos, un genial rendimiento multihilo y la democratización de los procesadores de más de 6 núcleos.
+
+Sin embargo, como todos sabréis el rendimiento multihilo nunca ha sido lo único importante y siempre ha habido un gran protagonista del monohilo a la hora de determinar qué tan bueno es un procesador. Es lo normal teniendo en cuenta que, aunque ahora se vaya viendo una tendencia al aprovechamiento de núcleos, la mayoría de juegos y muchas herramientas de productividad no eran capaces de aprovechar más de 4, 2 o incluso 1 núcleo. Pues bien, en este aspecto Ryzen 1000 quedaba claramente por detrás de Intel, pues su IPC (instrucciones por ciclo, no dependen de la frecuencia) estaba más o menos al nivel de Haswell (2014) y las frecuencias que se alcanzaban eran más bien bajas.
+
+Debido a esto, aunque el rendimiento en algunos usos como el renderizado era brutal, los Ryzen quedaban claramente por detrás de Intel en muchos otros como por ejemplo la gran mayoría de juegos.
+
+Además, no solo hay que hablar de desventajas en rendimiento monohilo. También hemos de mencionar los problemas asociados a la inmadurez de la plataforma en el momento de su salida.
+
+BIOS incompletas y con grandes problemas con el overclocking de memorias RAM (incluidos perfiles XMP básicos). Esto se combinaba con un controlador de memorias poco pulido en la CPU, por lo que la gente tenía que buscar memorias con chips de alta calidad como las que llevaban Samsung B-Die para asegurarse estabilidad. Los usuarios tuvieron que empezar a familiarizarse con comprobar regularmente actualizaciones de BIOS para poder conseguir las ansiadas mejoras de estabilidad.
+Falta de compatibilidad de la mayoría de disipadores del mercado, esto es natural teniendo en cuenta que era un socket con un montaje nuevo, afortunadamente las marcas fueron proactivas y adaptaron rápidamente sus disipadores además de ofrecer kits de montaje gratuitos a los disipadores existentes.
+Problemas pequeños como el famoso segfault en Linux, algo que prácticamente no afectaba a nadie pero que obligó a hacer una pequeña revisión de los procesadores, de hecho quien tuviese uno de los primeros Ryzen 1000 pudo haber tramitado garantía con ellos.
+Latencias altas en la comunicación entre los complejos de núcleos, dependencia de la velocidad de la RAM superior a la de Intel y latencia de acceso a memoria alta.
+Todos estos problemas se resumen en una falta de pulido por parte de AMD en una gran cantidad de aspectos que se fue dando gradualmente pero que dejó algunos remanentes en la percepción negativa de muchos usuarios.
+
+Lo cierto es que, a pesar de los problemas y de los hechos, la recepción que tuvo la primera generación de Ryzen fue muy buena y sirvió para empezar a destruir las falsas concepciones sobre los procesadores AMD que estaban extendidas en aquel momento. Por primera vez en varios años parecía que había dos empresas en el mercado de CPU x86 y no solo una.
+
+AMD Epyc y Ryzen Threadripper
+
+El segundo asalto de AMD fue en el segmento del alto rendimiento, con sus Ryzen Threadripper y EPYC. Estos procesadores aprovecharon la ventaja del diseño de AMD Zen y de la tecnología Infinity Fabric para incorporar más nucleos usando «fuerza bruta», es decir, en vez de ampliar la cantidad de núcleos de cada «die», simplemente se añadieron 3 más y se conectaron entre sí.
+
+En el caso de las CPU Epyc, orientadas a servidores, esto permitió ofrecer en una sola CPU lo que con Intel se conseguía en configuraciones dual socket, y encima a menor precio.
+
+Respecto a Threadripper, orientado al segmento más profesional del mercado doméstico, se usaban tan solo dos «die» para alcanzar 16 núcleos en su primer modelo estrella, el AMD Ryzen Threadripper 1950X. ¿Os acordáis del i7-6900K de 8 núcleos por 1200€? Pues bien, esta CPU 16/32 salió por menos, a «tan solo 1100 euros».
+
+Sin duda, estos primeros lanzamientos de Ryzen sentaron un precedente en el mercado que obligó a Intel a ponerse las pilas y a AMD a continuar mejorando para no quedarse atrás.
+
+Las primeras APUs basadas en Zen
+A mediados de 2017 se lanzaron al mercado las primeras APU con núcleos Zen, con nombre en clave Raven Ridge, que si bien pertenecían en cuanto a número a la serie 2000 se basaban en Ryzen 1000 en lo relativo a los núcleos de procesamiento. Respecto a los gráficos integrados, se basaron en la arquitectura Vega, variando las unidades de cómputo entre cada procesador según su nivel de rendimiento.
+
+Las APU más interesantes fueron el Ryzen 3 2200G y el Ryzen 5 2400G, de 4 núcleos, con 8 hilos en el caso del 2400G, y con gráficos Vega 8 y Vega 11 respectivamente. Estas marcaron la vuelta de AMD a ofrecer unas APU lo suficientemente competitivas como para resultar interesantes para jugar a juegos de demanda baja como el CS:GO o el LoL.
+
+Con cada generación posterior, las APU para escritorio se van basando en la arquitectura de la generación anterior, lo cual deja la nomenclatura un poco confusa.
+
+Zen+: la llegada de Ryzen 2000
+Entre principios y mediados de 2018 se anunció la familia de procesadores Ryzen 2000, basados en la arquitectura Zen+ que es básicamente una pequeña evolución con ciertas mejoras sobre Zen, y fabricados sobre un nodo de 14nm mejorado (renombrado posteriormente a 12nm).
+
+Estas CPU tenían total compatibilidad con las placas base que ya existían, tal y como anunció AMD desde el principio de la llegada de Zen, pues hablaron de 4 años de retrocompatibilidad. Respecto a sus características técnicas, no hubo nada fuera de lo común sino que se limitaron a evolucionar un poco sobre Ryzen 1000, y sobre todo fue un lanzamiento mucho más pulido de lo que había sido el anterior, lo que incrementaba la confianza en la plataforma.
+
+Zen 2, Ryzen 3000 y TRX40: la cima de la madurez
+La salida de los primeros procesadores Zen 2 con Ryzen 3000 marcó la gran cima de AMD en el mercado de los procesadores. Por primera vez en muchísimos años, se empezó a considerar que habían conseguido alcanzar a Intel, gracias a las mejoras que dejaron un IPC muy parecido al de Intel y unas frecuencias muy superiores.
+
+Además, el proceso de fabricación de 7nm permitió incluir más núcleos en el mismo espacio, por lo que por primera vez se presentaron procesadores de escritorio de 12 núcleos (Ryzen 9 3900X) y de 16 núcleos (Ryzen 9 3950X), hitos que acompañados por muchos otros han marcado el carácter revolucionario de esta generación.
+
+Prueba de lo que decimos es el gráfico que vemos arriba (fuente), que muestra cómo el lanzamiento de Ryzen 3000 ha resultado en un gran pico de ventas si bien evidentemente se vio afectado repentinamente por la pandemia de coronavirus.
+
+De esta gráfica podéis sacar una muy interesante información sobre cómo la situación de AMD era penosa hasta que la llegada de Ryzen provocó un incremento sustancial con un ‘sorpasso’ claro a mediados de 2018, justo con la escasez de chips de Intel.
+
+Otra familia más que se basó en Zen 2 fue la serie de procesadores Threadripper de la serie TRX40, que trajo la renovación y la maduración necesaria que necesitaba una serie Threadripper que todavía no estaba completamente pulida, si bien con la desventaja de usar un socket nuevo (físicamente es igual al TR4 anterior pero eléctricamente son incompatibles).
+
+Renoir y el éxito en portátiles
+Un segmento en el que los procesadores Ryzen todavía no habían despegado del todo era el de los portátiles. Los primeros modelos con Ryzen 2000 para portátiles no eran todavía lo suficientemente atractivos y trajeron ciertos problemas al principio, que requirieron de actualizaciones que dependían de la distribución de los fabricantes de portátiles hasta que AMD las hizo públicas para todos. Además, evidentemente el mercado de los portátiles depende, al igual que el de los equipos premontados, de los acuerdos de cada fabricante, y en este sentido
+
+Todo cambió a partir de este año, con el lanzamiento de las APUs Ryzen 4000 «Renoir» para portátiles, que no solo estaban muy bien afinadas sino que en la mayoría de los casos permitían crear ordenadores más potentes tanto en CPU como en gráficos integrados, pero no solo eso, sino que su bajo consumo permitió que se fabricasen portátiles más ligeros, más baratos y con un menor consumo que permitiese una refrigeración correcta.
+
+Prueba de este cambio es el impacto repentino en algunas métricas de cuota de mercado como la de Passmark, que precisamente no suele favorecer a AMD, donde esta salta hasta el 20% cuando llevaba años por debajo del 10%.
+
+Más información sobre AMD Ryzen
+Si queréis entrar en más detalle en las características técnicas de los procesadores Ryzen y su arquitectura, os recomendamos el siguiente artículo:
+
+El futuro que viene por delante
+Los aspectos futuros más relevantes que están por venir en la historia de AMD son la llegada de Ryzen 4000 «Vermeer» en procesadores de escritorio a finales de este año, según confirmó Lisa Su, que traerán consigo la arquitectura Zen 3 fabricada sobre el nodo de 7nm+ de TSMC y que podrían ser la última o penúltima generación de procesadores basados en el socket AM4.
+
+Más allá de este futuro, no conocemos más que pequeñas filtraciones.
+
+No debemos olvidarnos tampoco de las consolas, pues ya había hardware de AMD en todas las variantes de la PS4 y la Xbox One, incluidas la PS4 Pro y la Xbox One X, consistente en SoCs con núcleos de procesamiento y gráficos integrados que usaban tecnologías previas a Zen. Pues bien, las nuevas XBOX Series X y Playstation 5 incorporan núcleos Zen y gráficos RDNA, por lo que son muy interesantes desde el punto de vista tecnológico y marcarán también el futuro de AMD.
+
+Palabras finales y conclusión
+Como podemos ver, AMD ha disfrutado de una evolución drástica en los últimos 4 años gracias al lanzamiento de su arquitectura Zen. Antes de ello, la última década estuvo marcada por una peligrosa inferioridad a Intel que obligaba a AMD a competir en precio sacrificando beneficios para intentar mantenerse a flote en el mercado.
+
+La división de CPUs ha sido la responsable de un resurgimiento económico que ha dado un gran oxígeno a la compañía, y que la ha salvado de la desaparición. Todo ello conseguido gracias a un buen equipo de ingeniería y a un buen liderazgo. Esto contrasta con la débil situación de la división Radeon de tarjetas gráficas, de la que probablemente os hablaremos en futuros artículos.
+
